@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Poppins:wght@100&family=Roboto:wght@300&display=swap');
+.container{
+    display: flex;
+    justify-content: center;
+}
+.SectionTitle{
+    font-weight: bold;
+    font-family: Bebas Neue;
+    font-size: 2rem;
+}
+.content{
+    line-height: 1.5;
+    content: normal;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    text-align: justify;
+    font-family: 'Roboto';
+    /* text-shadow: 4px 4px 8px rgba(118, 202, 34, 0.2); */
+}
