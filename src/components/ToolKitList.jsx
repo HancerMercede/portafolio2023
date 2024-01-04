@@ -1,5 +1,5 @@
 import { ToolKit } from "./ToolKit";
-import { tools } from "./db/ToolKitdb";
+import { tools } from "../db/ToolKitdb";
 import styles from "./ToolKitList.module.css";
 
 export const ToolKitList = () => {
