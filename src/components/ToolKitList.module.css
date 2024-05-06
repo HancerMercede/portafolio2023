@@ -3,7 +3,7 @@
 
 .container {
    display: grid;
-   grid-template-columns: repeat(auto-fill, 50px);
+   grid-template-columns: repeat(auto-fill, 55px);
    gap: 40px;
    padding: 40px;
    justify-content: center;
@@ -17,7 +17,8 @@ h3 {
 .SectionTitle {
    font-family: Bebas Neue;
    font-size: 2rem;
-   background-color: #F7DC6F;
+   background: linear-gradient(to right, #fff, #212F3D);
    color: #fff;
    border-radius: 5px;
+   margin: 15px 0;
 }

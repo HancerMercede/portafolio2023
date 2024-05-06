@@ -7,9 +7,16 @@ export const ProjectCard = ({ project }) => {
       <Link to={project.url} target="_blak">
         <img className={styles.cover} src={project.image} alt={project.name} />
       </Link>
-      <div>
-        <p className={styles.description}>{project.Description}</p>
-        <p>{project.status}</p>
+      <div className={styles.description}>
+        <p>{project.Description}</p>
+
+        <div className={styles.status}>
+          {project.status === "Completed" ? (
+            <span> Status: ✅ </span>
+          ) : (
+            <span>Status: ❌</span>
+          )}
+        </div>
       </div>
     </div>
   );

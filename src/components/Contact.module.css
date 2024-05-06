@@ -1,0 +1,66 @@
+.container {
+    background-color: transparent;
+    margin: 1rem 0 5rem 0;
+    padding: 30px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px solid #2E4053;
+}
+
+.SectionTitle {
+    background: linear-gradient(to right, #fff, #212F3D);
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    color: #fff;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact_form input {
+    background-color: #fff;
+    width: auto;
+    height: auto;
+    padding: 10px 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #2E4053;
+    /* font-family: 'Vercetti'; */
+}
+
+.textarea {
+    background-color: #fff;
+    width: 600px;
+    height: 150px;
+    padding: 10px 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #2E4053;
+    /* font-family: 'Vercetti'; */
+}
+
+.contact_form button {
+    width: 600px;
+    padding: 15px 0;
+    cursor: pointer;
+    background: linear-gradient(to left, #9df3c0, #6cb0ef);
+    border-radius: 5px;
+    border: none;
+    font-family: 'Roboto';
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+    }
+}

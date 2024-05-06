@@ -4,7 +4,7 @@ import styles from "./ToolKitList.module.css";
 
 export const ToolKitList = () => {
   return (
-    <div>
+    <div id="TechStack">
       <h3 className={styles.SectionTitle}>Technologies</h3>
       <ul className={styles.container}>
         {tools.map((tool) => (

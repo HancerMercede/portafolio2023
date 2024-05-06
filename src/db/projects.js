@@ -34,4 +34,21 @@ export const projects = [
     status: "Development",
     url: "/",
   },
+  {
+    id: 5,
+    name: "Image Seach",
+    image: "/assets/images/imagesearch.png",
+    Description: "React.js app, for search images consuming the unsplash API.",
+    status: "Completed",
+    url: "https://image-search-3000.netlify.app",
+  },
+  {
+    id: 6,
+    name: "POS Manager",
+    image: "/assets/images/posmanager.png",
+    Description:
+      "POS Manager is an app to manage sales, customers, inventory and accounting information.",
+    status: "Developmet",
+    url: "/",
+  },
 ];

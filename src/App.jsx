@@ -1,20 +1,26 @@
-
-import './App.css'
-import { Header } from './components/Header'
-import { ToolKitList } from './components/ToolKitList'
-import { AboutMe } from './components/AboutMe'
-import { ProjectList } from './components/ProjectList'
-
+import "./App.css";
+import { Header } from "./components/Header";
+import { ToolKitList } from "./components/ToolKitList";
+import { AboutMe } from "./components/AboutMe";
+import { ProjectList } from "./components/ProjectList";
+import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
-  <>
-  <Header name='Hancer Mercede'/>
-   <ToolKitList/>
-   <AboutMe/>
-   <ProjectList/>
-  </>
-  )
+    <>
+      <Navbar />
+      <div className="container">
+        <Header name="Hancer Mercedes" />
+        <AboutMe />
+        <ToolKitList />
+        <ProjectList />
+        <Contact />
+        <Footer />
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;
