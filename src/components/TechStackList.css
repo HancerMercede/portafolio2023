@@ -1,0 +1,21 @@
+.tecthstack-container {
+    margin: 5rem 0;
+    background: linear-gradient(to bottom, #3ff476, #3fbdf4);
+    text-align: center;
+    padding: 2rem 5rem;
+    border-radius: 8rem 0 8rem 0;
+}
+
+.tecthstack-container h3 {
+    font-family: "Montserrat", serif;
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--font-color-primary);
+}
+
+.techlist-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+}

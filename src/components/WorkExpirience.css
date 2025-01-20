@@ -1,0 +1,21 @@
+.workexpirience-container {
+    background: linear-gradient(to bottom, #8e44ad, #3498db);
+    padding: 5rem 7rem;
+    text-align: center;
+    border-radius: 8rem 0 8rem 0;
+    margin-bottom: 5rem;
+
+}
+
+.workexpirience-container h2 {
+    font-family: "Montserrat", serif;
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--font-color-primary)
+}
+
+.companies-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

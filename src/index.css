@@ -1,33 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-:root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: #d2dae0;
-  background-color: #212F3D;
-  /* background: linear-gradient(to left, #E5E8E8, #fff); */
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', 'Vercetti';
 }
 
-@media screen and (max-width: 500px) {
+#root {
+  --font-color-primary: #ffff
+}
 
-  body {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 1fr);
-  }
+body {
+
+  background: linear-gradient(to right, #1C2833, #050a0d);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
 }

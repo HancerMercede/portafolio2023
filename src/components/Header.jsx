@@ -1,22 +1,35 @@
-import styles from "./Header.module.css";
-import "animate.css";
-
-export const Header = ({ name }) => {
+import "./Header.css";
+import profileImg from "../../public/assets/images/profile.jpeg";
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { Link } from "react-router-dom";
+export const Header = () => {
   return (
-    <>
-      <div className={`${styles.container} animate__animated animate__fadeIn`}>
-        <div>
-          <img
-            className={styles.profile}
-            src="assets/images/Professional_Picture.png"
-            alt="image"
-          />
-          <h1 className={styles.name}>Hi, I am {name}</h1>
+    <div className="header-container">
+      <img className="profile" src={profileImg} alt="Profile" />
+      <div>
+        <h1>Hancer Mercedes</h1>
+        <p className="profession">Software Engineer</p>
+        <div className="social-networks">
+          <Link
+            to="https://www.linkedin.com/in/hancer-mercedes-663766198/"
+            target="blank"
+          >
+            <FaLinkedin />
+          </Link>
+          <Link to="https://www.instagram.com/hancer_22/" target="blank">
+            <FaInstagram />
+          </Link>
+          <Link to="https://github.com/HancerMercede" target="blank">
+            <FaGithub />
+          </Link>
+          <Link>
+            <FaFacebook />
+          </Link>
         </div>
-        <p className={`${styles.role} animate__animated animate__bounceInLeft`}>
-          SOFTWARE ENGINEER
-        </p>
       </div>
-    </>
+    </div>
   );
 };

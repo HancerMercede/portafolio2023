@@ -1,0 +1,13 @@
+.cover {
+    width: 80px;
+    height: 80px;
+    transition: 0.2s;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.cover:hover {
+    transform: scale(1.5, 1.55);
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.5);
+}
