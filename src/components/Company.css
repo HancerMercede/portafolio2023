@@ -32,3 +32,15 @@
     font-weight: 700;
     font-size: 12px;
 }
+
+.company-logo {
+    object-fit: cover;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    transition: ease-in 0.5s;
+}
+
+.company-logo:hover {
+    transform: scale(1.1, 1.1);
+}

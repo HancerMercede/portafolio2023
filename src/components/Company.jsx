@@ -1,11 +1,14 @@
 import "./Company.css";
 
 export const Company = ({ props }) => {
-  const { years, company, position, description } = props;
+  const { logo, years, company, position, description } = props;
   return (
     <div className="company-container">
       <li>
-        <h3>{company}</h3>
+        <div>
+          <img className="company-logo" src={logo} alt={company} />
+          <h3>{company}</h3>
+        </div>
         <p className="position">{position}</p>
         <p className="years">{years}</p>
         <p className="description">{description}</p>

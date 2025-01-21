@@ -1,13 +1,16 @@
 .cover {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     transition: 0.2s;
-    border-radius: 50%;
+    box-shadow: 0px 12px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    object-fit: cover;
+    transition: ease-in 0.5s;
 
 }
 
 .cover:hover {
-    transform: scale(1.5, 1.55);
-    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.5);
+    transform: scale(1.5, 1.5);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
 }
