@@ -6,6 +6,7 @@ export const projects = [
     Description:
       "App for search movies, and see their details, release date and more.",
     status: "Completed",
+    Tools: "React.js, Tastack Query, The Movie Database",
     url: "https://cinepolis2023.netlify.app",
   },
   {
@@ -14,15 +15,17 @@ export const projects = [
     image: "/assets/images/gifExpert.png",
     Description: "App for search gifs, share it with friends and more.",
     status: "Completed",
+    Tools: "React.js, Ghipy API",
     url: "https://gifexpert-2023.netlify.app",
   },
   {
     id: 3,
-    name: "Tech-Masters",
-    image: "/assets/images/Tech-masters.png",
+    name: "Blog",
+    image: "/assets/images/Blog.png",
     Description:
       "Blog for technology posts, related to the most popular tools in the industry.",
     status: "Development",
+    Tools: "React.js, Strapi CMS",
     url: "https://tech-masters.netlify.app",
   },
   {
@@ -32,6 +35,7 @@ export const projects = [
     Description:
       "Management system for a medical service in a hospital, will help to increase the performance of proccess.",
     status: "Development",
+    Tools: "React.js, Unsplash API",
     url: "/",
   },
   {
@@ -40,15 +44,16 @@ export const projects = [
     image: "/assets/images/imagesearch.png",
     Description: "React.js app, for search images consuming the unsplash API.",
     status: "Completed",
+    Tools: "React.js, Unsplash API",
     url: "https://image-search-3000.netlify.app",
   },
   {
     id: 6,
-    name: "POS Manager",
-    image: "/assets/images/posmanager.png",
+    name: "Repository Pattern: Implementation",
+    image: "/assets/images/Repository Pattern in ASP.NET Core.png",
     Description:
-      "POS Manager is an app to manage sales, customers, inventory and accounting information.",
-    status: "Developmet",
-    url: "/",
+      "Implementing repository pattern and unit of work, this project helps developers to improve their project organization.",
+    Tools: "C#, EF Core, Sql Server, Mapster, Serilog, etc",
+    url: "https://github.com/HancerMercede/RepositoryPattern",
   },
 ];

@@ -5,16 +5,15 @@
 }
 
 #root {
-  --font-color-primary: #ffff
+  --font-color-primary: #ffff;
+  --title-color-primary: #3d464f;
 }
 
 body {
-
   background: linear-gradient(to right, #1C2833, #050a0d);
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-
 }

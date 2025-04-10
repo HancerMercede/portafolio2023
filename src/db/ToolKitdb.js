@@ -1,7 +1,7 @@
 export const tools = [
   {
     id: 1,
-    image: "/assets/images/React-js.png",
+    image: "/assets/images/React.png",
   },
   {
     id: 2,

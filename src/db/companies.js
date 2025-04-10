@@ -4,7 +4,7 @@ export const companies = [
 
     company: "Arroyo Consulting",
     position: "Software Engineer",
-    logo: "../assets/images/arroyo_consulting_software_logo.jpeg",
+    logo: "/assets/images/arroyo_consulting_software_logo.jpeg",
     years: "Jul.2024 - present",
     description:
       " Is a world class company providing technology services supported in the best talent available in the region, helping our clients to grow their organizations implementing digital solutions.",
@@ -12,7 +12,7 @@ export const companies = [
   {
     id: 1,
     company: "PACT",
-    logo: "../assets/images/logo_pact.png",
+    logo: "/assets/images/logo_pact.png",
     position: "Software Engineer",
     years: "Apr.2024 - Sept.2024",
     description:
@@ -21,16 +21,16 @@ export const companies = [
   {
     id: 1,
     company: "TBD SOFT",
-    logo: "../assets/images/TBD_logo.webp",
+    logo: "/assets/images/TBD_logo.webp",
     position: "Software Engineer, Consultant",
     years: "Nov.2023 - Mar.2024",
     description:
-      "TBD Soft is a leading consultant software development company specializing in creating tailored software solutions for businesses across various industries. With a team of highly skilled engineers, designers, and project managers, TBD Soft delivers cutting-edge software products that address the unique needs and challenges of their clients.",
+      "TBD Soft is a leading consultant software development company specializing in creating tailored software solutions for businesses across various industries.",
   },
   {
     id: 1,
     company: "Synergies Corp",
-    logo: "../assets/images/synergies_logo.jpeg",
+    logo: "/assets/images/synergies_logo.jpeg",
     position: "Software Engineer",
     years: "Oct.2022 - Nov.2023",
     description:
@@ -39,7 +39,7 @@ export const companies = [
   {
     id: 1,
     company: "Ferreteria Ochoa",
-    logo: "../assets/images/ochoa.png",
+    logo: "/assets/images/ochoa.png",
     position: "Software Engineer",
     years: "Feb.2020 - Oct.2022",
     description:
@@ -48,7 +48,7 @@ export const companies = [
   {
     id: 1,
     company: "Freelancer",
-    logo: "../assets/images/freelancer_logo.png",
+    logo: "/assets/images/freelancer_logo.png",
     position: "Software Engineer",
     years: "Mar. 2019 - Feb. 2020",
     description:
@@ -57,7 +57,7 @@ export const companies = [
   {
     id: 1,
     company: "Geo Geinsen S.A",
-    logo: "../assets/images/geo_logo.jpg",
+    logo: "/assets/images/geo_logo.jpg",
     position: "Software Engineer",
     years: "sept.2015 - Feb.2019",
     description:
