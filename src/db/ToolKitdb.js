@@ -1,7 +1,7 @@
 export const tools = [
   {
     id: 1,
-    image: "/assets/images/React-js.png",
+    image: "/assets/images/React.png",
   },
   {
     id: 2,
@@ -20,14 +20,6 @@ export const tools = [
     image: "/assets/images/docker.png",
   },
   {
-    id: 6,
-    image: "/assets/images/mysql.png",
-  },
-  {
-    id: 7,
-    image: "/assets/images/sequelize.png",
-  },
-  {
     id: 8,
     image: "/assets/images/html-5.png",
   },
@@ -38,13 +30,5 @@ export const tools = [
   {
     id: 10,
     image: "/assets/images/js.png",
-  },
-  {
-    id: 11,
-    image: "/assets/images/mongo.png",
-  },
-  {
-    id: 12,
-    image: "/assets/images/NET.png",
   },
 ];

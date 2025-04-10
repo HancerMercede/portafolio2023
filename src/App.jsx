@@ -1,20 +1,21 @@
+import { About } from "./components/About";
+import { Header } from "./components/Header";
+import { TechStackList } from "./components/TechStackList";
+import { WorkExpirience } from "./components/WorkExpirience";
+import { ProjectList } from "./components/ProjectList";
+import "animate.css";
 
-import './App.css'
-import { Header } from './components/Header'
-import { ToolKitList } from './components/ToolKitList'
-import { AboutMe } from './components/AboutMe'
-import { ProjectList } from './components/ProjectList'
-
-
+import "./index.css";
 function App() {
   return (
-  <>
-  <Header name='Hancer Mercede'/>
-   <ToolKitList/>
-   <AboutMe/>
-   <ProjectList/>
-  </>
-  )
+    <div className="container  animate__animated animate__fadeIn">
+      <Header />
+      <About />
+      <TechStackList />
+      <WorkExpirience />
+      <ProjectList />
+    </div>
+  );
 }
 
-export default App
+export default App;

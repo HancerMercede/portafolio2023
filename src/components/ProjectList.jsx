@@ -1,18 +1,18 @@
-import { ProjectCard } from "./ProjectCard";
-import styles from "./ProjectList.module.css";
+import { Project } from "./Project";
+import "./ProjectList.css";
 import { projects } from "../db/projects";
-
 export const ProjectList = () => {
   return (
-    <>
+    <div className="project-list-container">
+      <h2 id="title">Projects</h2>
       <div>
-        <h3 className={styles.sectionTitle}>Projects</h3>
-        <div className={styles.container}>
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
+        <ul className="project-list">
+          {projects &&
+            projects.map((project) => (
+              <Project key={project.id} props={project} />
+            ))}
+        </ul>
       </div>
-    </>
+    </div>
   );
 };

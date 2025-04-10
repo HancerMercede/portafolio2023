@@ -1,0 +1,23 @@
+.about-container {
+    text-align: center;
+    background: linear-gradient(to top, #ffff, #f4d03f);
+    padding: 2rem 5rem;
+    border-radius: 8rem 0 8rem 0;
+}
+
+.about-container h2 {
+    font-family: "Montserrat", serif;
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--font-color-primary);
+}
+
+.about-container p {
+    margin-top: 1rem;
+    line-height: 1.75;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    text-align: justify;
+    font-weight: 450;
+    color: var(--title-color-primary);
+}
