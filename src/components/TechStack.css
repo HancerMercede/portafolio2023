@@ -1,16 +1,66 @@
-.cover {
-    width: 50px;
-    height: 50px;
-    transition: 0.2s;
-    box-shadow: 0px 12px 5px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    object-fit: cover;
-    transition: ease-in 0.5s;
-
+/* Tech Stack Icons Styling with Devicon */
+.techlist-container li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
 }
 
-.cover:hover {
-    transform: scale(1.5, 1.5);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
+.techlist-container li i {
+    font-size: 60px;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.techlist-container li:hover i {
+    transform: scale(1.15);
+    filter: drop-shadow(0 8px 16px rgba(99, 102, 241, 0.4));
+}
+
+/* Custom image icons (like TanStack Query) */
+.tech-custom-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.techlist-container li:hover .tech-custom-icon {
+    transform: scale(1.15);
+    filter: drop-shadow(0 8px 16px rgba(99, 102, 241, 0.4));
+}
+
+/* Responsive sizing */
+@media (min-width: 768px) {
+    .techlist-container li {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .techlist-container li i {
+        font-size: 70px;
+    }
+    
+    .tech-custom-icon {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .techlist-container li {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .techlist-container li i {
+        font-size: 80px;
+    }
+    
+    .tech-custom-icon {
+        width: 80px;
+        height: 80px;
+    }
 }
