@@ -1,55 +1,132 @@
+/* Mobile First - Company Card */
 .company-container {
-    background: linear-gradient(to bottom, #f9e79f, #f39c12);
-    width: 400px;
-    height: inherit;
-    margin: 2rem auto;
-    border-radius: 1.5rem;
-    padding: 2rem 5rem;
-    transition: ease-in-out 0.5s;
-    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 4px 24px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.company-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .company-container:hover {
-    box-shadow: 8px 14px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    border-color: var(--border-glow);
+    box-shadow: 
+        0 12px 48px rgba(99, 102, 241, 0.2),
+        0 0 0 1px rgba(99, 102, 241, 0.2);
+}
+
+.company-container:hover::before {
+    opacity: 1;
 }
 
 .company-container li {
     list-style: none;
+    text-align: center;
 }
 
-.company-container h3 {
-    font-family: "Montserrat", serif;
-    font-weight: 900;
-    color: var(--title-color-primary)
-}
-
-.position {
-    font-family: "Montserrat", serif;
-    font-weight: 600;
-    color: var(--title-color-primary)
-}
-
-.description {
-    margin-top: .5rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--font-color-primary)
-}
-
-.years {
-    font-family: "Montserrat", serif;
-    font-weight: 700;
-    font-size: 12px;
-    color: var(--title-color-primary)
+.company-container > li > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .company-logo {
+    width: 80px;
+    height: 80px;
     object-fit: cover;
-    width: 5rem;
-    height: 5rem;
     border-radius: 50%;
-    transition: ease-in 0.5s;
+    border: 3px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-.company-logo:hover {
-    transform: scale(1.1, 1.1);
+.company-container:hover .company-logo {
+    transform: scale(1.1);
+    border-color: var(--accent-primary);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+.company-container h3 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.position {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--accent-primary);
+    margin: 0.5rem 0;
+}
+
+.years {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0.25rem 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.years::before {
+    content: '📅';
+}
+
+.description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+    .company-container {
+        padding: 2.5rem;
+    }
+    
+    .company-logo {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+    .company-container {
+        padding: 3rem;
+    }
+    
+    .company-logo {
+        width: 100px;
+        height: 100px;
+    }
 }

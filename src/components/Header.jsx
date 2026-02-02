@@ -1,5 +1,5 @@
 import "./Header.css";
-import profileImg from "../../public/assets/images/profile.jpeg";
+import profileImg from "/assets/images/profile.jpeg";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
