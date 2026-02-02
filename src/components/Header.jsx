@@ -9,11 +9,6 @@ import "animate.css";
 export const Header = () => {
   return (
     <div className="header-container">
-      <img
-        className="profile animate__animated  animate__slideInUp"
-        src={profileImg}
-        alt="Profile"
-      />
       <div>
         <h1 className="name animate__animated animate__zoomInUp ">
           Hancer Mercedes

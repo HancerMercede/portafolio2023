@@ -56,4 +56,24 @@ export const projects = [
     Tools: "C#, EF Core, Sql Server, Mapster, Serilog, etc",
     url: "https://github.com/HancerMercede/RepositoryPattern",
   },
+  {
+    id: 7,
+    name: "Budget-Tracker-app",
+    image: "/assets/images/Control de gastos Web.png",
+    Description:
+      "This app is built with React, Tailwing css and TypeScript, how its name says if personal control budget application.",
+    Tools:
+      "React, TypeScript, Vite, Vitest, React Testing Library, Tailwind css, firebase db and firebase auth",
+    url: "https://control-tracker.netlify.app/",
+  },
+  {
+    id: 8,
+    name: "New York Flow",
+    image: "/assets/images/NewYork-flow.png",
+    Description:
+      "This project is part of the 2026 edition of the ZTM React Developer course. I enrolled in this program to strengthen my React fundamentals and further improve my proficiency in building modern React applications.",
+    Tools:
+      "React, TypeScript, Vite, Vitest, React Testing Library, sass,Styled Components, firebase, Redux",
+    url: "https://newyork-flow.netlify.app/",
+  },
 ];
