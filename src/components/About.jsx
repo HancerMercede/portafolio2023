@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 export const About = () => {
   const [ref, inView] = useInView({
     threshold: 0.2,
-    triggerOnce: true
+    triggerOnce: true,
   });
 
   return (
@@ -18,18 +18,24 @@ export const About = () => {
     >
       <h2>About me </h2>
       <p>
-        I am a proactive person focused on achieving better results every day in
-        my life, a lover of growth and constant progress, seeking knowledge that
-        can activate or obtain what I want. I like to read, exercise, program
-        and set challenges that help me reach higher levels every day. Since I
-        understand that by giving by grace what you receive, you receive much
-        more. <br />I live in the Dominican Republic, Santiago de los
-        Caballeros, the second largest city in the country, I have a degree in
-        systems engineering from the autonomous university of Santo Domingo,
-        with more than 5 years of experience working with tools. such as C#,
-        .NET Core, SQL Server, HTML. CSS and JavaScript, for 4 years I have been
-        working with React to develop user interfaces and Node to develop the
-        Back-End.
+        With over 10 years of experience building scalable and maintainable
+        software, I specialize in designing systems that are built to evolve not
+        just to work today, but to adapt to the requirements of tomorrow. My
+        core focus is writing code that communicates intent clearly and stands
+        the test of time. I work with Clean Architecture and Clean Code
+        principles as a foundation, not as a checklist, ensuring that every
+        layer of a system has a clear responsibility and every decision is
+        intentional. I have extensive experience working with legacy codebases,
+        applying proven refactoring techniques to reduce technical debt, improve
+        testability, and restore confidence in systems that have grown difficult
+        to change. <br /> I understand that working with legacy code is not just
+        a technical challenge it's a strategic one. Tech stack I work with
+        regularly: C# · .NET Core · Entity Framework Core · Dapper · PostgreSQL
+        · TypeScript · JavaScript · React · Node.js <br />
+        I'm proactive, results-driven, and direct when it comes to communicating
+        progress, blockers, and solutions. I believe great software is built by
+        engineers who take ownership of the code, the architecture, and the
+        outcome.
       </p>
     </motion.div>
   );
