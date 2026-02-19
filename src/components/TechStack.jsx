@@ -1,4 +1,5 @@
 import "./TechStack.css";
+import { motion } from "framer-motion";
 
 // Usando iconos desde CDN de devicon para mejor compatibilidad
 export const TechStack = () => {
@@ -21,13 +22,20 @@ export const TechStack = () => {
   return (
     <>
       {techIcons.map((tech, index) => (
-        <li key={index} title={tech.name}>
+        <motion.li
+          key={index}
+          title={tech.name}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.2 }
+          }}
+        >
           {tech.type === "devicon" ? (
             <i className={tech.icon}></i>
           ) : (
             <img src={tech.icon} alt={tech.name} className="tech-custom-icon" />
           )}
-        </li>
+        </motion.li>
       ))}
     </>
   );

@@ -1,40 +1,21 @@
 /* Mobile First - Company Card */
 .company-container {
     background: var(--bg-card);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) saturate(180%);
     border: 1px solid var(--border-color);
+    border-left: 2px solid transparent;
     border-radius: 20px;
     padding: 2rem;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 
-        0 4px 24px rgba(0, 0, 0, 0.1),
-        0 0 0 1px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
     position: relative;
     overflow: hidden;
 }
 
-.company-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
 .company-container:hover {
-    transform: translateY(-5px);
-    border-color: var(--border-glow);
-    box-shadow: 
-        0 12px 48px rgba(99, 102, 241, 0.2),
-        0 0 0 1px rgba(99, 102, 241, 0.2);
-}
-
-.company-container:hover::before {
-    opacity: 1;
+    border-left-color: var(--neon-cyan);
+    box-shadow: var(--shadow-md);
+    transform: translateX(5px);
 }
 
 .company-container li {
@@ -67,44 +48,44 @@
 }
 
 .company-container h3 {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-family: 'Outfit', 'Space Grotesk', sans-serif;
     font-weight: 700;
-    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    font-size: clamp(1.4rem, 3vw, 1.7rem);
     color: var(--text-primary);
     margin: 0;
+    letter-spacing: -0.01em;
 }
 
 .position {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', 'Inter', sans-serif;
     font-weight: 600;
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp(1rem, 2vw, 1.15rem);
     color: var(--accent-primary);
     margin: 0.5rem 0;
+    letter-spacing: 0.01em;
 }
 
 .years {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', 'Inter', sans-serif;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: var(--text-muted);
     margin: 0.25rem 0;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-}
-
-.years::before {
-    content: '📅';
+    letter-spacing: 0.02em;
 }
 
 .description {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', 'Inter', sans-serif;
     font-weight: 400;
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-size: clamp(0.9rem, 2vw, 0.98rem);
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
     margin-top: 1rem;
     text-align: left;
+    letter-spacing: 0.01em;
 }
 
 /* Tablet (768px and up) */

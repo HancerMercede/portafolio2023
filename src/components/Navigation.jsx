@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import "./Navigation.css";
 
 export const Navigation = () => {
@@ -6,11 +7,12 @@ export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
-    { id: "home", label: "Home", icon: "🏠" },
-    { id: "about", label: "About", icon: "👨‍💻" },
-    { id: "tech-stack", label: "Tech Stack", icon: "🛠️" },
-    { id: "experience", label: "Experience", icon: "💼" },
-    { id: "projects", label: "Projects", icon: "🚀" },
+    { id: "home", label: "Home", icon: "H" },
+    { id: "about", label: "About", icon: "A" },
+    { id: "tech-stack", label: "Tech Stack", icon: "T" },
+    { id: "experience", label: "Experience", icon: "E" },
+    { id: "projects", label: "Projects", icon: "P" },
+    { id: "contact", label: "Contact", icon: "C" },
   ];
 
   useEffect(() => {
@@ -62,6 +64,14 @@ export const Navigation = () => {
               >
                 <span className="nav-icon">{item.icon}</span>
                 <span className="nav-label">{item.label}</span>
+
+                {activeSection === item.id && (
+                  <motion.div
+                    className="active-underline"
+                    layoutId="underline"
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  />
+                )}
               </button>
             </li>
           ))}

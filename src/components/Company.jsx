@@ -1,9 +1,22 @@
 import "./Company.css";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export const Company = ({ props }) => {
   const { logo, years, company, position, description } = props;
+  const [ref, inView] = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
   return (
-    <div className="company-container">
+    <motion.div
+      ref={ref}
+      className="company-container"
+      initial={{ opacity: 0, x: -20 }}
+      animate={inView ? { opacity: 1, x: 0 } : {}}
+      transition={{ duration: 0.5 }}
+    >
       <li>
         <div>
           <img className="company-logo" src={logo} alt={company} />
@@ -13,6 +26,6 @@ export const Company = ({ props }) => {
         <p className="years">{years}</p>
         <p className="description">{description}</p>
       </li>
-    </div>
+    </motion.div>
   );
 };

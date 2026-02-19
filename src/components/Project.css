@@ -1,14 +1,12 @@
 /* Mobile First - Project Card */
 .project-container {
     background: var(--bg-card);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(99, 102, 241, 0.2);
     border-radius: 20px;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 
-        0 4px 24px rgba(0, 0, 0, 0.1),
-        0 0 0 1px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
     position: relative;
     height: 100%;
     display: flex;
@@ -20,19 +18,21 @@
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--neon-cyan),
+        transparent
+    );
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .project-container:hover {
-    transform: translateY(-10px);
-    border-color: var(--border-glow);
-    box-shadow: 
-        0 20px 60px rgba(99, 102, 241, 0.25),
-        0 0 0 1px rgba(99, 102, 241, 0.2);
+    border-color: var(--neon-cyan);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
 }
 
 .project-container:hover::before {
@@ -49,11 +49,11 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s ease;
 }
 
 .project-container:hover .image {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .project-info {
@@ -64,22 +64,24 @@
 }
 
 .project-info h2 {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-family: 'Outfit', 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
     color: var(--text-primary);
     margin-bottom: 0.75rem;
     line-height: 1.3;
+    letter-spacing: -0.01em;
 }
 
 .project-info p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', 'Inter', sans-serif;
     font-weight: 400;
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-size: clamp(0.9rem, 2vw, 0.98rem);
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
     margin: 0;
     flex: 1;
+    letter-spacing: 0.01em;
 }
 
 hr {
@@ -91,13 +93,23 @@ hr {
 
 .card-footer {
     padding: 1rem 1.5rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', 'Inter', sans-serif;
     font-weight: 500;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: var(--text-muted);
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    letter-spacing: 0.02em;
+}
+
+.card-footer::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--neon-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--neon-cyan-glow);
 }
 
 .card-footer p {
@@ -106,11 +118,6 @@ hr {
     align-items: center;
     gap: 0.5rem;
     flex-wrap: wrap;
-}
-
-.card-footer::before {
-    content: '🛠️';
-    font-size: 1rem;
 }
 
 /* Tablet (768px and up) */

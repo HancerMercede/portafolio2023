@@ -1,22 +1,30 @@
 import "./Header.css";
-import profileImg from "/assets/images/profile.jpeg";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import "animate.css";
+import { motion } from "framer-motion";
+
 export const Header = () => {
   return (
     <header className="header-container">
-      <div>
-        <h1 className="name animate__animated animate__zoomInUp ">
-          Hancer Mercedes
-        </h1>
-        <p className="profession  animate__animated animate__zoomIn">
-          Software Engineer
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <h1 className="name">Hancer Mercedes</h1>
+        <p className="profession">
+          Software Engineer | .NET & React Specialist
         </p>
-        <div className="social-networks">
+
+        <motion.div
+          className="social-networks"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        >
           <Link
             className="LinkedIn"
             to="https://www.linkedin.com/in/hancer-mercedes-663766198/"
@@ -45,8 +53,8 @@ export const Header = () => {
           >
             <FaFacebook />
           </Link>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </header>
   );
 };

@@ -1,8 +1,21 @@
 import "./about.css";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export const About = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true
+  });
+
   return (
-    <div className="about-container">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="about-container"
+    >
       <h2>About me </h2>
       <p>
         I am a proactive person focused on achieving better results every day in
@@ -18,6 +31,6 @@ export const About = () => {
         working with React to develop user interfaces and Node to develop the
         Back-End.
       </p>
-    </div>
+    </motion.div>
   );
 };

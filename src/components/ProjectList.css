@@ -6,13 +6,16 @@
 }
 
 #title {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-family: 'Outfit', 'Space Grotesk', sans-serif;
     font-weight: 700;
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
     color: var(--text-primary);
     margin-bottom: 3rem;
     position: relative;
     display: inline-block;
+    letter-spacing: -0.02em;
+    text-transform: lowercase;
+    font-variant: small-caps;
 }
 
 #title::after {
