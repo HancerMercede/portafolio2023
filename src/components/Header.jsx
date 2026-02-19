@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import "animate.css";
 export const Header = () => {
   return (
-    <div className="header-container">
+    <header className="header-container">
       <div>
         <h1 className="name animate__animated animate__zoomInUp ">
           Hancer Mercedes
@@ -47,6 +47,6 @@ export const Header = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
