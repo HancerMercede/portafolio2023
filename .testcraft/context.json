@@ -1,0 +1,152 @@
+{
+  "_meta": {
+    "version": "3.0.0",
+    "createdAt": "2026-02-24T23:26:32.539Z",
+    "updatedAt": "2026-02-24T23:26:32.539Z",
+    "projectRoot": "E:\\Mis Archivos\\Portafolio\\portafolio2023",
+    "projectName": "my-portafolio",
+    "scanCommand": "node testcraft-init.js",
+    "refreshCommand": "node testcraft-init.js --refresh"
+  },
+  "project": {
+    "name": "my-portafolio",
+    "version": "0.0.0",
+    "runtime": "Node.js",
+    "language": "JavaScript",
+    "framework": "React",
+    "packageManager": "Yarn",
+    "hasTypeScript": false
+  },
+  "architecture": {
+    "pattern": "Flat / Simple",
+    "layers": [],
+    "testStrategy": "Unit test each module or function. Integration test entry points.",
+    "suggestedTestDirs": [
+      "src",
+      "lib",
+      "app"
+    ],
+    "allDirectories": [
+      "src",
+      "src\\components",
+      "src\\db"
+    ],
+    "folderMap": {
+      "src": {
+        "fileCount": 18,
+        "subDirs": [
+          "components",
+          "db"
+        ],
+        "files": [
+          "src\\App.jsx",
+          "src\\components\\About.jsx",
+          "src\\components\\BlogList.jsx",
+          "src\\components\\BlogPost.jsx",
+          "src\\components\\Company.jsx",
+          "src\\components\\Contact.jsx",
+          "src\\components\\Header.jsx",
+          "src\\components\\Navigation.jsx",
+          "src\\components\\Project.jsx",
+          "src\\components\\ProjectList.jsx",
+          "src\\components\\TechStack.jsx",
+          "src\\components\\TechStackList.jsx",
+          "src\\components\\WorkExpirience.jsx",
+          "src\\db\\companies.js",
+          "src\\db\\posts.js",
+          "src\\db\\projects.js",
+          "src\\db\\ToolKitdb.js",
+          "src\\main.jsx"
+        ]
+      }
+    }
+  },
+  "detectedTools": {
+    "testFramework": null,
+    "mockLib": null,
+    "assertLib": null,
+    "e2eTool": null,
+    "configFiles": [],
+    "testScript": "npm test",
+    "hasCoverage": false
+  },
+  "chosenTools": {
+    "testFramework": null,
+    "mockLib": null,
+    "assertLib": null,
+    "e2eTool": null,
+    "confirmed": false,
+    "confirmedAt": null
+  },
+  "learnedStyle": null,
+  "files": {
+    "testDirs": [],
+    "srcFileCount": 18,
+    "testFileCount": 0,
+    "allSrcFiles": [
+      "src\\App.jsx",
+      "src\\components\\About.jsx",
+      "src\\components\\BlogList.jsx",
+      "src\\components\\BlogPost.jsx",
+      "src\\components\\Company.jsx",
+      "src\\components\\Contact.jsx",
+      "src\\components\\Header.jsx",
+      "src\\components\\Navigation.jsx",
+      "src\\components\\Project.jsx",
+      "src\\components\\ProjectList.jsx",
+      "src\\components\\TechStack.jsx",
+      "src\\components\\TechStackList.jsx",
+      "src\\components\\WorkExpirience.jsx",
+      "src\\db\\companies.js",
+      "src\\db\\posts.js",
+      "src\\db\\projects.js",
+      "src\\db\\ToolKitdb.js",
+      "src\\main.jsx"
+    ],
+    "allTestFiles": []
+  },
+  "progress": {
+    "coveragePercent": 0,
+    "testedFiles": [],
+    "untestedFiles": [
+      "src\\App.jsx",
+      "src\\components\\About.jsx",
+      "src\\components\\BlogList.jsx",
+      "src\\components\\BlogPost.jsx",
+      "src\\components\\Company.jsx",
+      "src\\components\\Contact.jsx",
+      "src\\components\\Header.jsx",
+      "src\\components\\Navigation.jsx",
+      "src\\components\\Project.jsx",
+      "src\\components\\ProjectList.jsx",
+      "src\\components\\TechStack.jsx",
+      "src\\components\\TechStackList.jsx",
+      "src\\components\\WorkExpirience.jsx",
+      "src\\db\\companies.js",
+      "src\\db\\posts.js",
+      "src\\db\\projects.js",
+      "src\\db\\ToolKitdb.js",
+      "src\\main.jsx"
+    ],
+    "totalSrcFiles": 18,
+    "nextSuggested": [
+      "src\\App.jsx",
+      "src\\components\\About.jsx",
+      "src\\components\\BlogList.jsx",
+      "src\\components\\BlogPost.jsx",
+      "src\\components\\Company.jsx"
+    ],
+    "lastTestedFile": null,
+    "lastTestedAt": null
+  },
+  "session": {
+    "currentFile": null,
+    "currentTestType": null,
+    "history": [],
+    "notes": []
+  },
+  "preferences": {
+    "language": null,
+    "additionalContext": null
+  }
+}

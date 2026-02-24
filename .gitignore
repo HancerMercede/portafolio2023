@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 .codegpt
+# TestCraft — commit context.json to share progress with team
+# .testcraft/context.json
