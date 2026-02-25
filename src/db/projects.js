@@ -76,4 +76,14 @@ export const projects = [
       "React, TypeScript, Vite, Vitest, React Testing Library, sass,Styled Components, firebase, Redux",
     url: "https://newyork-flow.netlify.app/",
   },
+  {
+    id: 9,
+    name: "Nexus High Performance Cache",
+    image: "/assets/images/NexusStore.jpg",
+    Description:
+      "Nexus.Store is an ultra-high performance, embedded key-value storage engine built for .NET 10 and C# 14. It combines the raw power of Microsoft Research Garnet with the efficiency of MessagePack binary serialization to provide a world-class caching solution.",
+    Tools:
+      ".NET 10, C# 14, Microsoft Research Garnet, Message Pack Serializer, Redis Serialization Protocol (RESP)",
+    url: "https://github.com/HancerMercede/Nexus",
+  },
 ];

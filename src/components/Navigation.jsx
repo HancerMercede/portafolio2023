@@ -23,60 +23,66 @@ export const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
 
-      if (location.pathname !== '/') return;
+      if (location.pathname !== "/") return;
 
-      const sections = navItems.filter(item => !item.isRoute).map(item => document.getElementById(item.id));
+      const sections = navItems
+        .filter((item) => !item.isRoute)
+        .map((item) => document.getElementById(item.id));
       const scrollPosition = window.scrollY + 200;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
         if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navItems.filter(item => !item.isRoute)[i].id);
+          setActiveSection(navItems.filter((item) => !item.isRoute)[i].id);
           break;
         }
       }
     };
 
-    if (location.pathname !== '/') {
-      setActiveSection('');
+    if (location.pathname !== "/") {
+      setActiveSection("");
     }
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [location]);
+  }, [location, navItems]);
 
   useEffect(() => {
-    if (location.pathname === '/' && location.hash) {
-      const sectionId = location.hash.replace('#', '');
+    if (location.pathname === "/" && location.hash) {
+      const sectionId = location.hash.replace("#", "");
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
           const offsetTop = element.offsetTop - 80;
-          window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+          window.scrollTo({ top: offsetTop, behavior: "smooth" });
         }
       }, 100);
     }
   }, [location]);
 
   const navigateToSection = (sectionId) => {
-    if (location.pathname === '/') {
+    if (location.pathname === "/") {
       const element = document.getElementById(sectionId);
       if (element) {
         const offsetTop = element.offsetTop - 80;
-        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        window.scrollTo({ top: offsetTop, behavior: "smooth" });
       }
     } else {
       navigate(`/#${sectionId}`);
     }
   };
 
-  const isBlogPage = location.pathname.startsWith('/blog');
+  const isBlogPage = location.pathname.startsWith("/blog");
 
   return (
-    <nav className={`navigation ${isScrolled ? "scrolled" : ""} ${isBlogPage ? "blog-page" : ""}`}>
+    <nav
+      className={`navigation ${isScrolled ? "scrolled" : ""} ${isBlogPage ? "blog-page" : ""}`}
+    >
       <div className="nav-container">
         <div className="nav-logo">
-          <Link to="/" className="logo-text">HM</Link>
+          <Link to="/" className="logo-text">
+            HM
+          </Link>
         </div>
 
         <ul className="nav-menu">
@@ -85,16 +91,20 @@ export const Navigation = () => {
               {item.isRoute ? (
                 <Link
                   to="/blog"
-                  className={`nav-link ${location.pathname === '/blog' ? "active" : ""}`}
+                  className={`nav-link ${location.pathname === "/blog" ? "active" : ""}`}
                   aria-label={`Navigate to ${item.label}`}
                 >
                   <span className="nav-icon">{item.icon}</span>
                   <span className="nav-label">{item.label}</span>
-                  {location.pathname === '/blog' && (
+                  {location.pathname === "/blog" && (
                     <motion.div
                       className="active-underline"
                       layoutId="underline"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                      }}
                     />
                   )}
                 </Link>
@@ -111,7 +121,11 @@ export const Navigation = () => {
                     <motion.div
                       className="active-underline"
                       layoutId="underline"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                      }}
                     />
                   )}
                 </button>

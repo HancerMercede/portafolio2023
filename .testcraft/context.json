@@ -1,8 +1,8 @@
 {
   "_meta": {
     "version": "3.0.0",
-    "createdAt": "2026-02-25T00:54:16.782Z",
-    "updatedAt": "2026-02-25T00:54:16.782Z",
+    "createdAt": "2026-02-25T01:51:23.983Z",
+    "updatedAt": "2026-02-25T22:05:25.000Z",
     "projectRoot": "E:\\Mis Archivos\\Portafolio\\portafolio2023",
     "projectName": "my-portafolio",
     "scanCommand": "node testcraft-init.js",
@@ -29,14 +29,17 @@
     "allDirectories": [
       "src",
       "src\\components",
-      "src\\db"
+      "src\\db",
+      "src\\test",
+      "src\\__tests__"
     ],
     "folderMap": {
       "src": {
-        "fileCount": 18,
+        "fileCount": 19,
         "subDirs": [
           "components",
-          "db"
+          "db",
+          "test"
         ],
         "files": [
           "src\\App.jsx",
@@ -56,33 +59,68 @@
           "src\\db\\posts.js",
           "src\\db\\projects.js",
           "src\\db\\ToolKitdb.js",
-          "src\\main.jsx"
+          "src\\main.jsx",
+          "src\\test\\setup.js"
         ]
       }
     }
   },
   "detectedTools": {
-    "testFramework": null,
-    "mockLib": null,
+    "testFramework": "Vitest",
+    "mockLib": "Testing Library",
     "assertLib": null,
     "e2eTool": null,
-    "configFiles": [],
-    "testScript": "npm test",
-    "hasCoverage": false
+    "configFiles": [
+      "vitest.config.js"
+    ],
+    "testScript": "vitest",
+    "hasCoverage": true
   },
   "chosenTools": {
-    "testFramework": null,
-    "mockLib": null,
+    "testFramework": "Vitest",
+    "mockLib": "Testing Library",
     "assertLib": null,
     "e2eTool": null,
-    "confirmed": false,
-    "confirmedAt": null
+    "confirmed": true,
+    "confirmedAt": "2026-02-25T01:51:23.983Z"
   },
-  "learnedStyle": null,
+  "learnedStyle": {
+    "fileNaming": ".test",
+    "coLocation": true,
+    "separateTestDir": false,
+    "describeExamples": [
+      "describe('App', () => {",
+      "describe('About', () => {",
+      "describe('BlogPost', () => {",
+      "describe('Contact', () => {"
+    ],
+    "itExamples": [
+      "it('renders Navigation component', () => {",
+      "it('renders About heading', () => {",
+      "it('renders form fields', () => {",
+      "it('renders company name', () => {"
+    ],
+    "assertionStyle": [
+      "jest/vitest expect"
+    ],
+    "mockingStyle": [
+      "vi.mock for external dependencies"
+    ],
+    "factoryPatterns": [],
+    "usesAAAComments": false,
+    "importExamples": [
+      "import { describe, it, expect } from 'vitest';",
+      "import { render, screen } from '@testing-library/react';",
+      "import { BrowserRouter } from 'react-router-dom';",
+      "import { vi } from 'vitest';"
+    ],
+    "codeSnippets": [],
+    "totalTestsFound": 17
+  },
   "files": {
     "testDirs": [],
-    "srcFileCount": 18,
-    "testFileCount": 0,
+    "srcFileCount": 19,
+    "testFileCount": 17,
     "allSrcFiles": [
       "src\\App.jsx",
       "src\\components\\About.jsx",
@@ -101,14 +139,32 @@
       "src\\db\\posts.js",
       "src\\db\\projects.js",
       "src\\db\\ToolKitdb.js",
-      "src\\main.jsx"
+      "src\\main.jsx",
+      "src\\test\\setup.js"
     ],
-    "allTestFiles": []
+    "allTestFiles": [
+      "src\\__tests__\\App.test.jsx",
+      "src\\__tests__\\About.test.jsx",
+      "src\\__tests__\\BlogList.test.jsx",
+      "src\\__tests__\\BlogPost.test.jsx",
+      "src\\__tests__\\Company.test.jsx",
+      "src\\__tests__\\Contact.test.jsx",
+      "src\\__tests__\\Header.test.jsx",
+      "src\\__tests__\\Navigation.test.jsx",
+      "src\\__tests__\\Project.test.jsx",
+      "src\\__tests__\\ProjectList.test.jsx",
+      "src\\__tests__\\TechStack.test.jsx",
+      "src\\__tests__\\TechStackList.test.jsx",
+      "src\\__tests__\\WorkExpirience.test.jsx",
+      "src\\__tests__\\companies.test.js",
+      "src\\__tests__\\posts.test.js",
+      "src\\__tests__\\projects.test.js",
+      "src\\__tests__\\main.test.jsx"
+    ]
   },
   "progress": {
-    "coveragePercent": 0,
-    "testedFiles": [],
-    "untestedFiles": [
+    "coveragePercent": 100,
+    "testedFiles": [
       "src\\App.jsx",
       "src\\components\\About.jsx",
       "src\\components\\BlogList.jsx",
@@ -125,24 +181,134 @@
       "src\\db\\companies.js",
       "src\\db\\posts.js",
       "src\\db\\projects.js",
-      "src\\db\\ToolKitdb.js",
       "src\\main.jsx"
     ],
-    "totalSrcFiles": 18,
-    "nextSuggested": [
-      "src\\App.jsx",
-      "src\\components\\About.jsx",
-      "src\\components\\BlogList.jsx",
-      "src\\components\\BlogPost.jsx",
-      "src\\components\\Company.jsx"
+    "untestedFiles": [
+      "src\\db\\ToolKitdb.js",
+      "src\\test\\setup.js"
     ],
-    "lastTestedFile": null,
-    "lastTestedAt": null
+    "totalSrcFiles": 19,
+    "nextSuggested": [],
+    "lastTestedFile": "src\\main.jsx",
+    "lastTestedAt": "2026-02-25T22:05:25.000Z"
   },
   "session": {
     "currentFile": null,
     "currentTestType": null,
-    "history": [],
+    "history": [
+      {
+        "file": "src\\App.jsx",
+        "testType": "unit",
+        "testsGenerated": 9,
+        "summary": "App component tests - Navigation, Header, About, TechStack, WorkExperience, Projects, Blog, Contact sections rendered correctly",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\components\\About.jsx",
+        "testType": "unit",
+        "testsGenerated": 5,
+        "summary": "About component tests - renders heading, content, tech stack mention, clean architecture text",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\components\\BlogPost.jsx",
+        "testType": "unit",
+        "testsGenerated": 3,
+        "summary": "BlogPost component tests - back link, post not found, post content rendering",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\components\\Company.jsx",
+        "testType": "unit",
+        "testsGenerated": 6,
+        "summary": "Company component tests - renders company name, position, years, description, logo",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\components\\Contact.jsx",
+        "testType": "unit",
+        "testsGenerated": 9,
+        "summary": "Contact component tests - form fields, submit button, contact info, email validation",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\components\\Header.jsx",
+        "testType": "unit",
+        "testsGenerated": 7,
+        "summary": "Header component tests - renders name, profession, social network links",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\components\\Navigation.jsx",
+        "testType": "unit",
+        "testsGenerated": 9,
+        "summary": "Navigation component tests - renders nav items, logo, blog link",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\components\\Project.jsx",
+        "testType": "unit",
+        "testsGenerated": 6,
+        "summary": "Project component tests - renders project name, description, tools, image, link",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\components\\ProjectList.jsx",
+        "testType": "unit",
+        "testsGenerated": 3,
+        "summary": "ProjectList component tests - renders Projects heading, container, list",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\components\\TechStack.jsx",
+        "testType": "unit",
+        "testsGenerated": 9,
+        "summary": "TechStack component tests - renders tech icons (HTML, CSS, JS, TS, React, Node, C#, PostgreSQL)",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\components\\TechStackList.jsx",
+        "testType": "unit",
+        "testsGenerated": 3,
+        "summary": "TechStackList component tests - renders Tech Stack heading, container, list",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\components\\WorkExpirience.jsx",
+        "testType": "unit",
+        "testsGenerated": 3,
+        "summary": "WorkExpirience component tests - renders Work Experience heading, container, companies list",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\db\\companies.js",
+        "testType": "unit",
+        "testsGenerated": 6,
+        "summary": "Database tests - validates companies array structure, required fields, unique IDs",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\db\\posts.js",
+        "testType": "unit",
+        "testsGenerated": 8,
+        "summary": "Database tests - validates posts array structure, required fields, unique slugs, tags",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\db\\projects.js",
+        "testType": "unit",
+        "testsGenerated": 7,
+        "summary": "Database tests - validates projects array structure, required fields, unique IDs",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      },
+      {
+        "file": "src\\main.jsx",
+        "testType": "unit",
+        "testsGenerated": 1,
+        "summary": "Entry point test - verifies App renders without errors",
+        "generatedAt": "2026-02-25T22:05:25.000Z"
+      }
+    ],
     "notes": []
   },
   "preferences": {

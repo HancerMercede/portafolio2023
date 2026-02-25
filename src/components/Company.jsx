@@ -5,8 +5,9 @@ import { useInView } from "react-intersection-observer";
 export const Company = ({ props }) => {
   const { logo, years, company, position, description } = props;
   const [ref, inView] = useInView({
-    threshold: 0.3,
+    threshold: 0.1,
     triggerOnce: true,
+    rootMargin: "0px 0px -100px 0px",
   });
 
   return (

@@ -9,7 +9,7 @@ export const Project = ({ props }) => {
       className="project-container"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: "-100px", amount: 0.1 }}
       transition={{ duration: 0.5 }}
       whileHover={{ y: -5 }}
     >

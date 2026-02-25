@@ -6,8 +6,9 @@ import "./Contact.css";
 
 export const Contact = () => {
   const [ref, inView] = useInView({
-    threshold: 0.2,
+    threshold: 0.05,
     triggerOnce: true,
+    rootMargin: "0px 0px -100px 0px",
   });
 
   const formRef = useRef();
@@ -76,7 +77,9 @@ export const Contact = () => {
           <div className="contact-details">
             <div className="contact-item">
               <span className="contact-label">Email</span>
-              <a href="mailto:your.email@example.com">your.email@example.com</a>
+              <a href="mailto:hancermercedes@gmail.com">
+                hancermercedes@gmail.com
+              </a>
             </div>
 
             <div className="contact-item">
