@@ -41,6 +41,12 @@ export const BlogPost = () => {
     >
       <Link to="/blog" className="back-link">← Back to Blog</Link>
       
+      {post.image && (
+        <div className="post-featured-image">
+          <img src={post.image} alt={post.title} />
+        </div>
+      )}
+
       <header className="post-header">
         <div className="post-meta">
           <span className="post-date">{formatDate(post.date)}</span>

@@ -1,65 +1,168 @@
 export const posts = [
   {
     id: 1,
-    slug: "getting-started-with-csharp",
-    title: "Getting Started with C#: A Beginner's Guide",
-    excerpt: "Learn the fundamentals of C# programming language and start building your first applications.",
+    slug: "advanced-csharp-concepts",
+    title: "Advanced C# Concepts Every Developer Should Know",
+    excerpt: "Take your C# skills to the next level with advanced patterns, async programming, and performance optimization.",
+    image: "/assets/images/CSharpAdvance.png",
     content: `
-# Getting Started with C#
+# Advanced C# Concepts Every Developer Should Know
 
-C# is a powerful, modern programming language developed by Microsoft. Whether you want to build web applications, games, or desktop software, C# is an excellent choice.
+As a C# developer, mastering advanced concepts will help you write more efficient, maintainable, and scalable applications. Let's dive into some essential advanced topics.
 
-## Why Learn C#?
+## 1. Async/Await Deep Dive
 
-- **Versatile**: Build web apps (ASP.NET), games (Unity), desktop apps (WPF), and more
-- **In-demand**: One of the most popular programming languages in the industry
-- **Strong typing**: Helps catch errors early in development
-- **Great tooling**: Visual Studio provides an excellent development experience
-
-## Your First C# Program
+Async programming is essential for building responsive applications:
 
 \`\`\`csharp
-using System;
-
-namespace HelloWorld
+public async Task<User> GetUserAsync(int id)
 {
-    class Program
+    return await _userRepository.FindByIdAsync(id);
+}
+
+// Async with multiple parallel operations
+public async Task<(User User, List<Order> Orders)> GetUserWithOrdersAsync(int userId)
+{
+    var userTask = _userRepository.FindByIdAsync(userId);
+    var ordersTask = _orderRepository.GetOrdersByUserIdAsync(userId);
+    
+    await Task.WhenAll(userTask, ordersTask);
+    
+    return (userTask.Result, ordersTask.Result);
+}
+\`\`\`
+
+## 2. Pattern Matching
+
+Modern C# pattern matching is powerful:
+
+\`\`\`csharp
+// Switch expressions
+public string GetDescription(object value) => value switch
+{
+    int i when i > 0 => $"Positive integer: {i}",
+    int i => $"Non-positive integer: {i}",
+    string s => $"String of length {s.Length}",
+    null => "Null value",
+    _ => "Unknown type"
+};
+
+// Property patterns
+bool IsValidEmail(Person person) => person switch
+{
+    { Email: string email } when email.Contains('@') => true,
+    _ => false
+};
+\`\`\`
+
+## 3. Records (C# 9+)
+
+Value equality and immutability made easy:
+
+\`\`\`csharp
+public record User(int Id, string Name, string Email);
+
+var user1 = new User(1, "John", "john@email.com");
+var user2 = new User(1, "John", "john@email.com");
+
+// Value equality - true!
+Console.WriteLine(user1 == user2);
+
+// With expressions (immutable updates)
+var user3 = user1 with { Name = "Jane" };
+\`\`\`
+
+## 4. Source Generators
+
+Generate code at compile time:
+
+\`\`\`csharp
+[Generator]
+public partial class MyGenerator : ISourceGenerator
+{
+    public void Initialize(GeneratorInitializationContext context)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
+        // Register for initialization
+    }
+    
+    public void Execute(GeneratorExecutionContext context)
+    {
+        var source = @"namespace Generated 
+        { 
+            public class HelloWorld 
+            { 
+                public string Greet() => ""Hello from generated code!""; 
+            } 
+        }";
+        
+        context.AddSource("helloWorld.g.cs", source);
     }
 }
 \`\`\`
 
-## Key Concepts to Master
+## 5. Memory Management & Span<T>
 
-1. **Variables and Data Types**: int, string, bool, double
-2. **Control Flow**: if/else, switch, loops
-3. **Methods**: Reusable blocks of code
-4. **Classes and Objects**: Object-oriented programming fundamentals
-5. **LINQ**: Language Integrated Query for data manipulation
+For high-performance scenarios:
 
-## Next Steps
+\`\`\`csharp
+public int CountWords(ReadOnlySpan<char> text)
+{
+    int count = 0;
+    for (int i = 0; i < text.Length; i++)
+    {
+        if (char.IsWhiteSpace(text[i]) && 
+            (i == 0 || !char.IsWhiteSpace(text[i - 1])))
+        {
+            count++;
+        }
+    }
+    return count;
+}
 
-- Install Visual Studio or VS Code with C# extension
-- Follow Microsoft's official C# documentation
-- Practice with small projects
-- Join communities like Stack Overflow and Reddit
+// Usage without allocation
+Span<char> buffer = stackalloc char[256];
+\`\`\`
+
+## 6. Dependency Injection Best Practices
+
+\`\`\`csharp
+// Interface segregation
+public interface IUserReader
+{
+    Task<User> GetByIdAsync(int id);
+}
+
+public interface IUserWriter
+{
+    Task SaveAsync(User user);
+}
+
+// Register with quality of life
+services.AddScoped<IUserReader, UserRepository>();
+services.AddScoped<IUserWriter, UserRepository>();
+
+// FromKeyedServices (C# 12+)
+services.AddKeyedSingleton<ICache, RedisCache>("redis");
+services.AddKeyedSingleton<ICache, MemoryCache>("memory");
+\`\`\`
+
+## Conclusion
+
+These advanced concepts will help you write more professional C# code. Keep practicing and exploring the .NET ecosystem for even more advanced topics like Source Generators, System.Text.Json customization, and performance profiling.
 
 Happy coding!
     `,
     date: "2024-01-15",
     author: "Harold Mora",
-    tags: ["C#", "Beginner", "Programming"],
-    readTime: "5 min"
+    tags: ["C#", "Advanced", "Programming"],
+    readTime: "8 min"
   },
   {
     id: 2,
     slug: "typescript-best-practices-2024",
     title: "TypeScript Best Practices for 2024",
     excerpt: "Level up your TypeScript skills with these essential best practices and patterns.",
+    image: "/assets/images/TSBP.png",
     content: `
 # TypeScript Best Practices for 2024
 
@@ -154,6 +257,7 @@ Stay typed!
     slug: "react-hooks-deep-dive",
     title: "React Hooks: A Deep Dive into useState and useEffect",
     excerpt: "Master the fundamental React hooks and understand when to use each one effectively.",
+    image: "/assets/images/ReactHooks.png",
     content: `
 # React Hooks: A Deep Dive
 

@@ -37,6 +37,11 @@ export const BlogList = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <Link to={`/blog/${post.slug}`} className="blog-card-link">
+              {post.image && (
+                <div className="blog-card-image">
+                  <img src={post.image} alt={post.title} />
+                </div>
+              )}
               <div className="blog-card-header">
                 <span className="blog-date">{formatDate(post.date)}</span>
                 <span className="blog-read-time">{post.readTime} read</span>
