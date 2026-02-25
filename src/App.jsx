@@ -17,37 +17,40 @@ function App() {
       <Navigation />
       <div className="container animate__animated animate__fadeIn">
         <Routes>
-          <Route path="/" element={
-            <>
-              <section id="home">
-                <Header />
-              </section>
+          <Route
+            path="/"
+            element={
+              <>
+                <section id="home">
+                  <Header />
+                </section>
 
-              <section id="about">
-                <About />
-              </section>
+                <section id="about">
+                  <About />
+                </section>
 
-              <section id="tech-stack">
-                <TechStackList />
-              </section>
+                <section id="tech-stack">
+                  <TechStackList />
+                </section>
 
-              <section id="experience">
-                <WorkExpirience />
-              </section>
+                <section id="experience">
+                  <WorkExpirience />
+                </section>
 
-              <section id="projects">
-                <ProjectList />
-              </section>
+                <section id="projects">
+                  <ProjectList />
+                </section>
 
-              <section id="blog">
-                <BlogList />
-              </section>
+                <section id="blog/*">
+                  <BlogList />
+                </section>
 
-              <section id="contact">
-                <Contact />
-              </section>
-            </>
-          } />
+                <section id="contact">
+                  <Contact />
+                </section>
+              </>
+            }
+          />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>

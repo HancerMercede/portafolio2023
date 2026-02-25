@@ -3,11 +3,10 @@ export const posts = [
     id: 1,
     slug: "advanced-csharp-concepts",
     title: "Advanced C# Concepts Every Developer Should Know",
-    excerpt: "Take your C# skills to the next level with advanced patterns, async programming, and performance optimization.",
+    excerpt:
+      "Take your C# skills to the next level with advanced patterns, async programming, and performance optimization.",
     image: "/assets/images/CSharpAdvance.png",
     content: `
-# Advanced C# Concepts Every Developer Should Know
-
 As a C# developer, mastering advanced concepts will help you write more efficient, maintainable, and scalable applications. Let's dive into some essential advanced topics.
 
 ## 1. Async/Await Deep Dive
@@ -155,16 +154,16 @@ Happy coding!
     date: "2024-01-15",
     author: "Harold Mora",
     tags: ["C#", "Advanced", "Programming"],
-    readTime: "8 min"
+    readTime: "8 min",
   },
   {
     id: 2,
     slug: "typescript-best-practices-2024",
     title: "TypeScript Best Practices for 2024",
-    excerpt: "Level up your TypeScript skills with these essential best practices and patterns.",
+    excerpt:
+      "Level up your TypeScript skills with these essential best practices and patterns.",
     image: "/assets/images/TSBP.png",
     content: `
-# TypeScript Best Practices for 2024
 
 TypeScript has become the standard for building scalable JavaScript applications. Here are the best practices you should follow in 2024.
 
@@ -250,16 +249,16 @@ Stay typed!
     date: "2024-01-20",
     author: "Harold Mora",
     tags: ["TypeScript", "JavaScript", "Best Practices"],
-    readTime: "7 min"
+    readTime: "7 min",
   },
   {
     id: 3,
     slug: "react-hooks-deep-dive",
     title: "React Hooks: A Deep Dive into useState and useEffect",
-    excerpt: "Master the fundamental React hooks and understand when to use each one effectively.",
+    excerpt:
+      "Master the fundamental React hooks and understand when to use each one effectively.",
     image: "/assets/images/ReactHooks.png",
     content: `
-# React Hooks: A Deep Dive
 
 React Hooks revolutionized how we write React components. Let's explore the most essential hooks.
 
@@ -331,6 +330,6 @@ Understanding hooks deeply is essential for writing effective React applications
     date: "2024-01-25",
     author: "Harold Mora",
     tags: ["React", "Hooks", "JavaScript"],
-    readTime: "6 min"
-  }
+    readTime: "6 min",
+  },
 ];
